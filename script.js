@@ -2,6 +2,7 @@ document.addEventListener("scroll", function () {
     let scrollPosition = window.scrollY;
     document.querySelector('.principal-image img').style.transform = `translateY(${scrollPosition * 0.7}px)`;
 });
+
 let lastScrollTop = 0;
 
 document.addEventListener("scroll", function () {
@@ -54,3 +55,4 @@ document.addEventListener("DOMContentLoaded", function () {
         menuCategories.scrollIntoView({ behavior: 'smooth' });
     });
 });
+

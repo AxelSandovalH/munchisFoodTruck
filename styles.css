@@ -28,12 +28,13 @@ header .navbar a {
     width: 100%;
     overflow: hidden; /* Para ocultar el desbordamiento de la imagen */
     position: relative; /* Necesario para el posicionamiento absoluto del contenido adicional */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    height: 5000px;
+    
 }
 
 .principal-image img {
@@ -50,5 +51,47 @@ header .navbar a {
     height: 100px;
     object-fit: cover;
 
+}
+.container .menu-categories {
+    width: 100%;
+    height: 400px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .menu-categories .categories{
+   
+    width: 75%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container .menu-categories .categories  div {
+    background: yellow;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+.container .container-dos {
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+}
+.container .container-dos .about-us-container-right{
+    width: 50%;
+    height: 1000px;
+    margin-left: 50%;
+    background: red;
+}
+.container .container-dos .order-container-left{
+    width: 50%;
+    top: 50%;
+    height: 1000px;
+    right: 50%;
+    background: red;
 }
 

@@ -1,25 +1,37 @@
+/* Estilos generales */
+
 body {
     margin: 0;
     font-family: 'Roboto Mono', monospace;
 }
+
+/* Estilos de la barra de navegación */
+
 header {
     display: flex;
     position: fixed;
     z-index: 10;
-    width: 1000px;
-    margin-left: 15%;
+    width: 100%;
     top: 20px;
     height: 50px;
     background-color: white;
     align-items: center;
     justify-content: center;
     border: 2px solid black;
+    transition: transform 0.3s ease-out;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+    /* transition: transform 0.3s ease-out; */
 }
 
 header .navbar a {
     padding-inline: 10px;
     text-decoration: none;
 }
+
+/* Estilos de la imagen principal */
 
 .principal-image {
     display: flex;
@@ -31,67 +43,149 @@ header .navbar a {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    
-}
-
 .principal-image img {
     width: 100%;
     height: 100vh; /* Usar el 100% de la altura visible */
     object-fit: cover;
+    transition: filter 0.3s ease-in-out; /* Agrega transición a la propiedad de filtro */
 }
-.principal-image .logo{
+
+/* Estilos del logo en la imagen principal */
+
+.principal-image .logo {
     position: absolute;
     top: 350px;
 }
-.principal-image .logo img{
+
+.principal-image .logo img {
     width: 100px;
     height: 100px;
     object-fit: cover;
-
 }
+
+/* Estilos del contenedor de categorías del menú */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .container .menu-categories {
     width: 100%;
     height: 400px;
-    background: white;
+    background: rgb(247, 247, 247);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
-.container .menu-categories .categories{
-   
+
+.container .menu-categories .categories {
     width: 75%;
     height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-.container .menu-categories .categories  div {
-    background: yellow;
+
+.container .menu-categories .categories div {
     width: 100%;
     height: 100%;
     margin: 10px;
+    position: relative;
 }
+
+/* Estilos del texto en el contenedor de categorías */
+
+.container .menu-categories .categories .comida p {
+    position: absolute;
+    font-weight: bold;
+    color: black;
+    font-size: large;
+    margin-top: 80px;
+    margin-left: 80px;
+    opacity: 0;
+    z-index: 300;
+    transition: opacity 0.3s ease-in-out; /* Agrega una transición suave a la propiedad de opacidad */
+}
+
+.container .menu-categories .categories div:hover p {
+    opacity: 1; /* Cuando se hace hover sobre el div .comida, establece la opacidad en 1 */
+}
+
+/* Estilos de las imágenes en el contenedor de categorías */
+
+.container .menu-categories .categories div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+    z-index: 200;
+}
+
+.container .menu-categories .categories div:hover img {
+    filter: blur(3px);
+}
+
+/* Estilos del botón de menú */
+
+.container .menu-categories .button-menu {
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    background: rgb(137, 10, 43);
+    color: white;
+    border-radius: 8px;
+    appearance: none; /* Restablece la apariencia del botón */
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 3px; /* Sin relleno */
+    outline: none; /* Quita el contorno predeterminado al enfocar */
+    font-family: inherit; /* Hereda la fuente del elemento padre */
+    font-size: inherit; /* Hereda el tamaño de fuente del elemento padre */
+    transition: background 0.3s ease-in-out;
+}
+
+.container .menu-categories .button-menu:hover {
+    background: rgb(213, 15, 67);
+}
+
+/* Estilos del contenedor dos (abajo del menú) */
+
 .container .container-dos {
     display: flex;
     flex-direction: column;
-    height: 2000px;
-}
-.container .container-dos .about-us-container-right{
-    width: 50%;
-    height: 1000px;
-    margin-left: 50%;
-    background: red;
-}
-.container .container-dos .order-container-left{
-    width: 50%;
-    top: 50%;
-    height: 1000px;
-    right: 50%;
-    background: red;
+    height: 1500px;
+    background-image: url('https://th.bing.com/th/id/R.4766a650dfa1e034660cc1478bb3def0?rik=HKpprzlfLvwMvg&pid=ImgRaw&r=0');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el elemento */
+    background-position: center; /* Centra la imagen en el elemento */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
+/* Estilos del contenedor derecho en la sección dos */
+
+.container .container-dos .about-us-container-right {
+    width: 50%;
+    height: 750px;
+    margin-left: 50%;
+    background: white;
+}
+
+/* Estilos del contenedor izquierdo en la sección dos */
+
+.container .container-dos .order-container-left {
+    width: 50%;
+    top: 50%;
+    height: 750px;
+    right: 50%;
+    background: white;
+}
+
+/* Estilos del pie de página */
+
+footer .footer-container {
+    width: 100%;
+    height: 300px;
+    background: yellow;
+}

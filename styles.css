@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Estilos de la barra de navegación */
@@ -10,27 +10,55 @@ body {
 header {
     display: flex;
     position: fixed;
-    z-index: 10;
+    z-index: 15;
     width: 100%;
-    top: 0px;
-    height: 50px;
-    background-color: white;
+    top: o;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   
     transition: transform 0.3s ease-out;
+    font-size: 15px
+
 }
 
 header.hidden {
     transform: translateY(-100%);
     /* transition: transform 0.3s ease-out; */
 }
-
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 header .navbar a {
-    padding-inline: 10px;
+    margin-inline: 20px;
+    padding: 10px;
     text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
 }
 
+header .navbar .logoImageNavBar {
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+}
+header .navbar .logoImageNavBar img {
+    width: 200px;
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+    
+    display: inline;
+}
+header .navbar .logoImageNavBar img:hover {
+    transform: scale(1.1);
+}
 /* Estilos de la imagen principal */
 
 .principal-image {
@@ -47,20 +75,24 @@ header .navbar a {
     width: 100%;
     height: 100vh; /* Usar el 100% de la altura visible */
     object-fit: cover;
-    transition: filter 0.3s ease-in-out; /* Agrega transición a la propiedad de filtro */
-}
 
+}
+.principal-image .logo:hover {
+    transform: scale(1.1);
+}
 /* Estilos del logo en la imagen principal */
 
 .principal-image .logo {
     position: absolute;
-    top: 350px;
+    top: 250px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .principal-image .logo img {
-    width: 100px;
-    height: 100px;
+   width: 500px;
+   height: 200px;
     object-fit: cover;
+   
 }
 
 /* Estilos del contenedor de categorías del menú */
@@ -73,13 +105,15 @@ header .navbar a {
 .container .menu-categories {
     width: 100%;
     height: 400px;
-    background: rgb(247, 247, 247);
+    background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    z-index: 10000;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 15;
+
     
 }
 
@@ -102,13 +136,12 @@ header .navbar a {
 
 .container .menu-categories .categories .comida p {
     position: absolute;
-    font-weight: bold;
     color: black;
     font-size: large;
     margin-top: 80px;
     margin-left: 80px;
     opacity: 0;
-    z-index: 300;
+    z-index: 7;
     transition: opacity 0.3s ease-in-out; /* Agrega una transición suave a la propiedad de opacidad */
 }
 
@@ -123,7 +156,7 @@ header .navbar a {
     height: 100%;
     object-fit: cover;
     transition: filter 0.3s ease-in-out;
-    z-index: 200;
+    z-index: 5;
 }
 
 .container .menu-categories .categories div:hover img {
@@ -159,19 +192,20 @@ header .navbar a {
     display: grid;
     width: 100%;
     height: 2000px;
+    background-color: white;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     grid-template-rows: repeat(2, 1fr);    /* Dos filas */
     gap: 0px; /* Espacio entre las celdas */
     padding: 0; /* Espaciado interno del contenedor */
-    z-index: 1000000;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 11;
+    box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1), -10px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos del contenedor derecho en la sección dos */
 
 .container .container-dos .about-us-container-right {
    
-    background: white;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,6 +213,10 @@ header .navbar a {
 }
 .container .container-dos .about-us-container-right div {
     text-align: center;
+    
+}
+.container .container-dos .about-us-container-right div h1, h2{
+    font-weight: 200;
 }
 .container .container-dos .about-us-container-right div hr{
     width: 50%;
@@ -187,17 +225,19 @@ header .navbar a {
 
 .container .container-dos .about-us-container-right .horarios {
     margin-top: 20px;
+    
 }
 
 .container .container-dos .about-us-container-right .horarios h1 {
     text-align: center;
     margin-bottom: 10px;
+    font-weight: 200;
 }
 
 .container .container-dos .about-us-container-right .horarios p {
     text-align: center;
     margin: 5px;
-    font-weight: bold;
+   
 }
 
 .container .container-dos .about-us-container-right .horarios p span {
@@ -212,20 +252,32 @@ header .navbar a {
 /* Estilos del contenedor izquierdo en la sección dos */
 
 .container .container-dos .order-container-left {
-    background: white;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.container .container-dos .order-container-left .mapa{
-    border-radius: 8px;
+.container .container-dos .order-container-left .content-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
 }
+.container .container-dos .order-container-left .container h1 {
+    position: relative;
+    top: 0;
+}
+
 .container .container-dos .imagen-derecha {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 7;
 }
 .container .container-dos .imagen-izquierda {
     
@@ -234,21 +286,71 @@ header .navbar a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 7;
 }
 .container .container-dos .imagen-derecha img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 6;
 }
 .container .container-dos .imagen-izquierda img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 6;
 }
 /* Estilos del pie de página */
 
-footer .footer-container {
+.footer-container {
     width: 100%;
     height: 300px;
-    background: rgb(223, 223, 223);
+    background: rgb(28, 28, 28);
+    display: flex;
+    flex-direction: column;
+    /* margin: 0;
+    padding: 0; */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    
+   
+}
+.footer-container .footer-title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0;
+}
+.footer-container .footer-title h1{
+   font-size: large;
+   font-weight: 300;
+}
+.footer-container .footer-title p{
+    font-size: small;
+    font-weight: 100;
+}
+.footer-container .footer-links {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    
+}
+.footer-container .footer-links a{
+    text-decoration: none;
+    color: white;
+    margin-inline:20px;
+}
+.footer-container .logo-footer-container {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    top: 0;
+}
+.footer-container .logo-footer-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

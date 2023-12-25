@@ -326,7 +326,7 @@ header .navbar .logoImageNavBar img:hover {
    font-weight: 300;
 }
 .footer-container .footer-title p{
-    font-size: small;
+    font-size: 10px;
     font-weight: 100;
 }
 .footer-container .footer-links {
@@ -342,6 +342,11 @@ header .navbar .logoImageNavBar img:hover {
     text-decoration: none;
     color: white;
     margin-inline:20px;
+    transition: color 0.3s ease;
+    
+}
+.footer-container .footer-links a:hover {
+    color: rgb(255, 16, 129);
 }
 .footer-container .logo-footer-container {
     position: relative;
@@ -366,6 +371,10 @@ header .navbar .logoImageNavBar img:hover {
     margin-inline: 10px;
     font-size: 20px;
     color: white;
+    transition: color 0.3s ease;
+}
+.footer-container .social-networks a i:hover {
+    color: rgb(255, 16, 129);
 }
 .footer-container .rights {
     display: flex;
@@ -374,5 +383,14 @@ header .navbar .logoImageNavBar img:hover {
     align-items: center;
 }
 .footer-container .rights p {
+    text-align: center;
     font-size: 10px;
+}
+.footer-container .rights p a{
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: white;
+}
+.footer-container .rights p a:hover {
+    color: rgb(255, 16, 129);
 }

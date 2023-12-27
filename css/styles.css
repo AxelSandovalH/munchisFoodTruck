@@ -35,14 +35,18 @@ header .navbar {
     justify-content: center;
 }
 header .navbar a {
-    margin-inline: 20px;
+    margin-inline: 50px;
     padding: 10px;
     text-decoration: none;
     color: black;
     border-radius: 8px;
-    transition: background 0.3s ease-in-out;
+    transition: border 0.3s ease;
+    font-weight: 400;
 }
+header .navbar a:hover {
+    border: 1px solid yellow;
 
+}
 header .navbar .logoImageNavBar {
     position: absolute;
     left: 20px;
@@ -394,3 +398,5 @@ header .navbar .logoImageNavBar img:hover {
 .footer-container .rights p a:hover {
     color: rgb(255, 16, 129);
 }
+
+

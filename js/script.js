@@ -56,3 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+const abrirHamburguesa =
+document.querySelector("#hamburguesa");
+const cerrarHamburguesa =
+document.querySelector("#burguerClose");
+const Hamburguesa =
+document.querySelector("#modal")
+
+abrirHamburguesa.addEventListener("click",()=>{
+    Hamburguesa.showModal();
+    console.log("lepicaste");
+})

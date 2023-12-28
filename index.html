@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Munchies Food Truck </title>
 </head>
 <body>
     <header>
@@ -16,10 +16,12 @@
             <div class="logoImageNavBar">
                 <img src="img/MUNCHIES_logotipo.png" alt="">
             </div>
-           
+           <div class="navbar-content">
             <a href="#menu">Menu</a>
             <a href="#aboutus">Horarios</a>
             <a href="#location">Ubicación</a>
+           </div>
+           
         </nav>
     </header>
    
@@ -32,7 +34,7 @@
         </div>
         <div class="menu-categories" id="menu">
             <div class="categories">
-                <div class="comida starters">
+                <div class="comida starters" >
                     <p>Hamburguesas</p>
                     <img src="https://www.fmdos.cl/wp-content/uploads/2018/05/Ham_Cerdo-850x504.jpg" alt="">
                 </div>
@@ -43,13 +45,19 @@
                 <div class="comida mains">
                     <p>Munchies</p>
                     <img src="https://blog.amigofoods.com/wp-content/uploads/2020/08/traditioanl-choripan-argentina-1024x689.jpg" alt="">
+                     
                 </div>
                 <div class="comida desserts">
-                    <p>Bebidas</p>
-                    <img src="https://ingredienta.com/wp-content/uploads/2020/03/felixmaracuya1-e1638388264353.png" alt="">
+                        <p>Bebidas</p>
+                        <img src="https://ingredienta.com/wp-content/uploads/2020/03/felixmaracuya1-e1638388264353.png" alt="">
                 </div>
             </div>
-            <button class="button-menu">Ver menu pdf</button>
+            <button class="button-menu" id="hamburguesa"><!--<a href="img/menu.jpg"></a>-->Ver menu </button>
+            <!-- Modales para cada categoría del menú -->
+            <dialog id="modal">
+                <h1>Hola soy un modal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi cupiditate, eum quisquam illum dolores est. Numquam deleniti quibusdam rem nisi eaque minima ea assumenda quasi repellendus placeat, ullam asperiores ipsam?</p>
+            </dialog>
         </div>
         <div class="container-dos">
             <div class="imagen-izquierda parallax">

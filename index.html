@@ -34,7 +34,7 @@
         </div>
         <div class="menu-categories" id="menu">
             <div class="categories">
-                <div class="comida starters" >
+                <div class="comida starters" id="burguer" >
                     <p>Hamburguesas</p>
                     <img src="https://www.fmdos.cl/wp-content/uploads/2018/05/Ham_Cerdo-850x504.jpg" alt="">
                 </div>
@@ -52,11 +52,40 @@
                         <img src="https://ingredienta.com/wp-content/uploads/2020/03/felixmaracuya1-e1638388264353.png" alt="">
                 </div>
             </div>
-            <button class="button-menu" id="hamburguesa"><!--<a href="img/menu.jpg"></a>-->Ver menu </button>
+            <a href="img/menu.jpg"><button class="button-menu">Ver menu </button></a>
+            
             <!-- Modales para cada categoría del menú -->
-            <dialog id="modal">
-                <h1>Hola soy un modal</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi cupiditate, eum quisquam illum dolores est. Numquam deleniti quibusdam rem nisi eaque minima ea assumenda quasi repellendus placeat, ullam asperiores ipsam?</p>
+            <dialog id="modal-burguer">
+                <div class="burguer-container">
+                    <figure>
+                        <img src="https://th.bing.com/th/id/OIP.14DlbHiMvYFosm57NXMMqgHaHa?rs=1&pid=ImgDetMain" alt="">
+                    </figure>
+                    <div id="burguer-close">
+                        X
+                    </div>
+                        
+                    
+                    <div class="burguer-info">
+                        <h1>Hamburguesa Bien Cabrona</h1>
+                        <p>Esta es la hamburguesa mas cabrona</p>
+                        <a target="_blank" href="img/menu.jpg">
+                            <button>
+                                Ver Menu Completo
+                            </button>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </dialog>
+            <dialog id="modal-papas">
+
+            </dialog>
+            <dialog id="modal-munchies">
+
+            </dialog>
+            <dialog id="modal-bebidas">
+
             </dialog>
         </div>
         <div class="container-dos">

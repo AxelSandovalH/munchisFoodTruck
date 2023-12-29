@@ -436,5 +436,78 @@ header.hidden {
     color: rgb(255, 16, 129);
 }
 /* Modales */
+#modal-burguer {
+    max-width: 50vw;
+    max-height: 80%;
+    border: none;
+    padding: 0;
+    border-radius: 20px;
+    
+}
+#modal-burguer .burguer-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+#modal-burguer .burguer-container figure {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#modal-burguer .burguer-container figure img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    object-fit: cover;
+}
+#modal-burguer .burguer-container .burguer-info {
+    width: 50%;
+    padding: 20px;
+}
+#modal-burguer .burguer-container #burguer-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal-burguer .burguer-container #burguer-close:hover {
+    background: rgb(137, 10, 43);
+    cursor: pointer;
+    color: white;
+}
 
+#modal-burguer .burguer-container .burguer-info button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 40px;
+    background: rgb(137, 10, 43);
+    color: white;
+    border-radius: 8px;
+    appearance: none; /* Restablece la apariencia del botón */
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 3px; /* Sin relleno */
+    outline: none; /* Quita el contorno predeterminado al enfocar */
+    font-family: inherit; /* Hereda la fuente del elemento padre */
+    font-size: 10px; /* Hereda el tamaño de fuente del elemento padre */
+    transition: background 0.3s ease-in-out;
+}
+#modal-burguer .burguer-container .burguer-info button:hover{
+    background: rgb(213, 15, 67);
+}
+#modal-burguer::backdrop {
+    background-color: rgba(0, 0, 0, 0.55);
+}
 

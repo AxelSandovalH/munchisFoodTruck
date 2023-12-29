@@ -57,13 +57,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const abrirHamburguesa =
-document.querySelector("#hamburguesa");
+document.querySelector("#burguer");
 const cerrarHamburguesa =
-document.querySelector("#burguerClose");
+document.querySelector("#burguer-close");
 const Hamburguesa =
-document.querySelector("#modal")
+document.querySelector("#modal-burguer")
 
 abrirHamburguesa.addEventListener("click",()=>{
     Hamburguesa.showModal();
     console.log("lepicaste");
+})
+
+cerrarHamburguesa.addEventListener("click",()=>{
+    Hamburguesa.close();
 })

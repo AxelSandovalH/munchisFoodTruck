@@ -56,12 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const abrirHamburguesa =
-document.querySelector("#burguer");
-const cerrarHamburguesa =
-document.querySelector("#burguer-close");
-const Hamburguesa =
-document.querySelector("#modal-burguer")
+const abrirHamburguesa = document.querySelector("#modal-burguer-open");
+const cerrarHamburguesa = document.querySelector("#modal-burguer-close");
+const Hamburguesa = document.querySelector("#modal-burguer");
 
 abrirHamburguesa.addEventListener("click",()=>{
     Hamburguesa.showModal();
@@ -71,3 +68,35 @@ abrirHamburguesa.addEventListener("click",()=>{
 cerrarHamburguesa.addEventListener("click",()=>{
     Hamburguesa.close();
 })
+
+const abrirPapas = document.querySelector("#modal-papas-open");
+const cerrarPapas = document.querySelector("#modal-papas-close");
+const Papas = document.querySelector("#modal-papas")
+
+abrirPapas.addEventListener("click", ()=>{
+    Papas.showModal();
+});
+
+cerrarPapas.addEventListener("click", ()=> {
+    Papas.close();
+});
+
+const abrirMunchies = document.querySelector("#modal-munchies-open");
+const cerrarMunchies = document.querySelector("#modal-munchies-close");
+const Munchies = document.querySelector("#modal-munchies");
+abrirMunchies.addEventListener("click",()=> {
+    Munchies.showModal();
+});
+cerrarMunchies.addEventListener("click",()=> {
+    Munchies.close();
+});
+
+const abrirBebida = document.querySelector("#modal-bebidas-open");
+const cerrarBebida = document.querySelector("#modal-bebidas-close");
+const Bebidas = document.querySelector("#modal-bebidas");
+abrirBebida.addEventListener("click",()=> {
+    Bebidas.showModal();
+});
+cerrarBebida.addEventListener("click",()=> {
+    Bebidas.close();
+});

@@ -34,58 +34,107 @@
         </div>
         <div class="menu-categories" id="menu">
             <div class="categories">
-                <div class="comida starters" id="burguer" >
+                <div class="comida starters" id="modal-burguer-open">
                     <p>Hamburguesas</p>
                     <img src="https://www.fmdos.cl/wp-content/uploads/2018/05/Ham_Cerdo-850x504.jpg" alt="">
                 </div>
-                <div class="comida sandwiches">
+                <div class="comida sandwiches"id="modal-papas-open">
                     <p>Papas</p>
                     <img src="https://th.bing.com/th/id/R.adf22dc42c42d22bea67dd8e84db7aa6?rik=Nhse%2f1hxs4OuOw&riu=http%3a%2f%2fblog.kiwilimon.com%2fwp-content%2fuploads%2f2012%2f02%2fPapas-francesas-al-horno.jpg&ehk=f8jOS%2bnQ%2fpH1%2b9QXxeFC9%2fokL9vm4qQBmCDEZdGFNEY%3d&risl=&pid=ImgRaw&r=0" alt="">
                 </div>
-                <div class="comida mains">
+                <div class="comida mains" id="modal-munchies-open">
                     <p>Munchies</p>
                     <img src="https://blog.amigofoods.com/wp-content/uploads/2020/08/traditioanl-choripan-argentina-1024x689.jpg" alt="">
                      
                 </div>
-                <div class="comida desserts">
+                <div class="comida desserts" id="modal-bebidas-open">
                         <p>Bebidas</p>
                         <img src="https://ingredienta.com/wp-content/uploads/2020/03/felixmaracuya1-e1638388264353.png" alt="">
                 </div>
             </div>
-            <a href="img/menu.jpg"><button class="button-menu">Ver menu </button></a>
+            <a target="_blank" href="img/menu.jpg"><button class="button-menu">Ver menu </button></a>
             
             <!-- Modales para cada categoría del menú -->
-            <dialog id="modal-burguer">
-                <div class="burguer-container">
+            <dialog class="modal" id="modal-burguer">
+                <div class="modal-container">
                     <figure>
-                        <img src="https://th.bing.com/th/id/OIP.14DlbHiMvYFosm57NXMMqgHaHa?rs=1&pid=ImgDetMain" alt="">
+                        <img src="https://cdn.shopify.com/s/files/1/0275/5143/2784/products/hamburguesa_1600x.jpg?v=1613402802" alt="">
                     </figure>
-                    <div id="burguer-close">
+                    <div class="modal-close" id="modal-burguer-close">
                         X
                     </div>
-                        
-                    
-                    <div class="burguer-info">
-                        <h1>Hamburguesa Bien Cabrona</h1>
-                        <p>Esta es la hamburguesa mas cabrona</p>
+                    <div class="modal-info">
+                        <h1>Burguer Artesanal</h1>
+                        <p>
+                            ¡Descubre nuestra Hamburguesa Artesanal! Con 150 g de jugosa carne de res, pan artesanal, lechuga, tomate, cebolla, pepinillos y aderezos, esta delicia culinaria ofrece una experiencia de sabores equilibrados y frescura única. ¡Sumérgete en una explosión de colores y texturas con cada bocado!</p>
                         <a target="_blank" href="img/menu.jpg">
                             <button>
                                 Ver Menu Completo
                             </button>
                         </a>
-                        
                     </div>
                 </div>
-                
             </dialog>
-            <dialog id="modal-papas">
-
+            <dialog class="modal" id="modal-papas">
+                <div class="modal-container">
+                    <figure>
+                        <img src="https://thecozyapron.com/wp-content/uploads/2018/03/dijon-roasted-potatoes_thecozyapron_5.jpg" alt="">
+                    </figure>
+                    <div class="modal-close" id="modal-papas-close">
+                        X
+                    </div>
+                    <div class="modal-info">
+                        <h1>Papas Gajo</h1>
+                        <p>
+                            ¡Descubre nuestras Papas Gajo! Con su irresistible sabor y textura crujiente por fuera, pero tiernas por dentro, estas deliciosas papas son el acompañamiento perfecto para cualquier ocasión. Preparadas con esmero y sazonadas con una mezcla única de especias, cada bocado te transportará a una experiencia de sabor inigualable. Ya sea que las disfrutes como aperitivo o como guarnición, nuestras Papas Gajo son el toque perfecto para completar tu experiencia culinaria. ¡Sumérgete en la satisfacción de cada gajo y deja que el deleite comience!    
+                        </p>
+                        <a target="_blank" href="img/menu.jpg">
+                            <button>
+                                Ver Menu Completo
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </dialog>
-            <dialog id="modal-munchies">
-
+            <dialog class="modal" id="modal-munchies">
+                <div class="modal-container">
+                    <figure>
+                        <img src="https://dumplingsandmore.fr/wp-content/uploads/2021/06/P1020719-1100x1467.jpg" alt="">
+                    </figure>
+                    <div class="modal-close" id="modal-munchies-close">
+                        X
+                    </div>
+                    <div class="modal-info">
+                        <h1>Choripan</h1>
+                        <p>
+                            ¡Explora nuestro Choripán! Una deliciosa combinación de sabores auténticos te espera en cada bocado. Con la perfecta fusión entre la jugosidad del chorizo y la suavidad del pan artesanal, este manjar se convierte en una experiencia culinaria que despierta tus sentidos. Nuestro choripán está cuidadosamente preparado con ingredientes de alta calidad, logrando un equilibrio único de texturas y aromas. La mezcla de sabores intensos, la frescura de los condimentos y la calidad inigualable se unen para crear un festín inolvidable. ¡Embárcate en un viaje gastronómico y descubre la auténtica pasión del choripán en cada mordisco!
+                        </p>
+                        <a target="_blank" href="img/menu.jpg">
+                            <button>
+                                Ver Menu Completo
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </dialog>
-            <dialog id="modal-bebidas">
-
+            <dialog class="modal" id="modal-bebidas">
+                <div class="modal-container">
+                    <figure>
+                        <img src="https://s.cornershopapp.com/product-images/3872392.jpg?versionId=Sv.eUql4gXGJqo2IG_jDQ1MrOgNwSoNy" alt="">
+                    </figure>
+                    <div class="modal-close" id="modal-bebidas-close">
+                        X
+                    </div>
+                    <div class="modal-info">
+                        <h1>Felix De Maracuyá</h1>
+                        <p>¡Sumérgete en la exquisita experiencia de nuestra bebida Félix! Creada con la mezcla perfecta de sabores refrescantes y vibrantes, esta bebida se convierte en el compañero ideal para tus momentos en Munchies Food Truck. Con cada sorbo, disfrutarás de la intensidad de la maracuyá, aportando una explosión de frescura a tu paladar. La singularidad de Félix reside en su capacidad para equilibrar lo dulce y lo refrescante, creando así una bebida única que deleitará tus sentidos. Déjate llevar por la magia de la maracuyá y experimenta una verdadera indulgencia con nuestra refrescante bebida Félix. ¡Descúbrelo y deja que tu sed sea saciada con estilo!</p>
+                        <a target="_blank" href="img/menu.jpg">
+                            <button>
+                                Ver Menu Completo
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </dialog>
         </div>
         <div class="container-dos">

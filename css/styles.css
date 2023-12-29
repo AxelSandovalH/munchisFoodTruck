@@ -436,7 +436,7 @@ header.hidden {
     color: rgb(255, 16, 129);
 }
 /* Modales */
-#modal-burguer {
+.modal {
     max-width: 50vw;
     max-height: 80%;
     border: none;
@@ -444,7 +444,7 @@ header.hidden {
     border-radius: 20px;
     
 }
-#modal-burguer .burguer-container{
+.modal .modal-container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -452,23 +452,23 @@ header.hidden {
     padding: 0;
     margin: 0;
 }
-#modal-burguer .burguer-container figure {
+.modal .modal-container figure {
     width: 50%;
     margin: 0;
     padding: 0;
     height: 100%;
 }
-#modal-burguer .burguer-container figure img {
+.modal .modal-container figure img {
     width: 100%;
     height: 100%;
     padding: 0;
     object-fit: cover;
 }
-#modal-burguer .burguer-container .burguer-info {
+.modal .modal-container .modal-info {
     width: 50%;
     padding: 20px;
 }
-#modal-burguer .burguer-container #burguer-close {
+.modal .modal-container .modal-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -480,13 +480,13 @@ header.hidden {
     align-items: center;
     justify-content: center;
 }
-#modal-burguer .burguer-container #burguer-close:hover {
+.modal .modal-container .modal-close:hover {
     background: rgb(137, 10, 43);
     cursor: pointer;
     color: white;
 }
 
-#modal-burguer .burguer-container .burguer-info button {
+.modal .modal-container .modal-info button {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -504,10 +504,10 @@ header.hidden {
     font-size: 10px; /* Hereda el tamaño de fuente del elemento padre */
     transition: background 0.3s ease-in-out;
 }
-#modal-burguer .burguer-container .burguer-info button:hover{
+.modal .modal-container .modal-info button:hover{
     background: rgb(213, 15, 67);
 }
-#modal-burguer::backdrop {
+.modal::backdrop {
     background-color: rgba(0, 0, 0, 0.55);
 }
 

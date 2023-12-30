@@ -533,7 +533,7 @@ header.hidden {
 @media (max-width: 640px) {
     .principal-image {
         width: 100%;
-        height: 50vh;
+        height: 100vh;
     }
    .container .menu-categories {
     display: none;
@@ -548,8 +548,16 @@ header.hidden {
     display: flex;
     flex-direction: column;
    }
-   /* Ajustes para dispositivos móviles */
-@media (max-width: 640px) {
+   
+   .container .container-dos .about-us-container-right {
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   }
+   .container .container-dos .order-container-left {
+    width: 100%;
+    height: 100vh;
+   }
     .navbar .navbar-content {
         display: none;
         flex-direction: column;
@@ -600,11 +608,12 @@ header.hidden {
     .navbar.hidden {
         transform: translateY(-100%);
     }
+    .menu-icon {
+        display: block;
+        z-index: 1000000;
+    }
 }
 
    
-.menu-icon {
-    display: block;
-    z-index: 1000000;
-}
-  }
+
+  

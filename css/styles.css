@@ -1,10 +1,25 @@
-
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    
 }
 
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 10%;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+}
 /* Estilos de la barra de navegación */
 
 header {
@@ -111,7 +126,7 @@ header.hidden {
 .container {
     display: flex;
     flex-direction: column;
-    
+    overflow: auto;
 }
 
 .container .menu-categories {
@@ -154,6 +169,7 @@ header.hidden {
     margin-left: 20%;
     opacity: 0;
     z-index: 7;
+    cursor: pointer;
     transition: opacity 0.3s ease-in-out; /* Agrega una transición suave a la propiedad de opacidad */
 }
 
@@ -514,3 +530,81 @@ header.hidden {
     background-color: rgba(0, 0, 0, 0.55);
 }
 
+@media (max-width: 640px) {
+    .principal-image {
+        width: 100%;
+        height: 50vh;
+    }
+   .container .menu-categories {
+    display: none;
+   }
+   .container .container-dos .imagen-derecha {
+    display: none;
+   }
+   .container .container-dos .imagen-izquierda {
+    display: none;
+   }
+   .container .container-dos {
+    display: flex;
+    flex-direction: column;
+   }
+   /* Ajustes para dispositivos móviles */
+@media (max-width: 640px) {
+    .navbar .navbar-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 8vh; /* Altura de la barra de navegación */
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbar .navbar-content.show {
+        display: flex;
+    }
+
+    .navbar .navbar-content a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 1000000;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu-icon .bar {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .menu-icon.active .bar {
+        background-color: white;
+    }
+
+    /* Añadimos transición al navbar para una animación suave */
+    .navbar {
+        transition: transform 0.3s ease-out;
+    }
+
+    .navbar.hidden {
+        transform: translateY(-100%);
+    }
+}
+
+   
+.menu-icon {
+    display: block;
+    z-index: 1000000;
+}
+  }

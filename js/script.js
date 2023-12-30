@@ -100,3 +100,31 @@ abrirBebida.addEventListener("click",()=> {
 cerrarBebida.addEventListener("click",()=> {
     Bebidas.close();
 });
+
+
+function toggleMenu() {
+    const navbarContent = document.querySelector('.navbar-content');
+    const menuIcon = document.querySelector('.menu-icon');
+
+    navbarContent.classList.toggle('show');
+    menuIcon.classList.toggle('active');
+
+    
+    navbarContent.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navbarContent.classList.remove('show');
+            menuIcon.classList.remove('active');
+        });
+    });
+}
+
+
+document.addEventListener('click', (event) => {
+    const navbarContent = document.querySelector('.navbar-content');
+    const menuIcon = document.querySelector('.menu-icon');
+
+    if (!navbarContent.contains(event.target) && !menuIcon.contains(event.target)) {
+        navbarContent.classList.remove('show');
+        menuIcon.classList.remove('active');
+    }
+});

@@ -1,9 +1,5 @@
-document.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    document.querySelector('.principal-image img').style.transform = `translateY(${scrollPosition * 0.7}px)`;
-});
-
 let lastScrollTop = 0;
+let headerHidden = false;
 
 document.addEventListener("scroll", function () {
     let currentScrollTop = window.scrollY;
@@ -11,14 +7,31 @@ document.addEventListener("scroll", function () {
     // Verifica la dirección del scroll
     if (currentScrollTop > lastScrollTop) {
         // Scroll hacia abajo
-        document.querySelector('header').classList.add('hidden');
+        if (!headerHidden) {
+            document.querySelector('header').classList.add('hidden');
+            headerHidden = true;
+        }
     } else {
         // Scroll hacia arriba
-        document.querySelector('header').classList.remove('hidden');
+        if (headerHidden) {
+            document.querySelector('header').classList.remove('hidden');
+            headerHidden = false;
+        }
     }
 
     lastScrollTop = currentScrollTop;
 });
+
+// Muestra el header al tocar la pantalla en dispositivos móviles
+document.addEventListener("touchstart", function () {
+    if (headerHidden) {
+        document.querySelector('header').classList.remove('hidden');
+        headerHidden = false;
+    }
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Agrega un evento de clic al enlace del menú
     document.querySelector('a[href="#menu"]').addEventListener('click', function (event) {

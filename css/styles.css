@@ -535,8 +535,47 @@ header.hidden {
         width: 100%;
         height: 100vh;
     }
-   .container .menu-categories {
-    display: none;
+    .container .menu-categories {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1em;
+    }
+
+    .container .menu-categories .categories {
+       width: 100%; 
+       margin-top: 8em;
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+       gap: 10px;
+       margin-bottom: 10em;
+    }
+   .container .menu-categories .categories div {
+    width: 100%;
+
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+   }
+   .container .menu-categories .categories div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5;
+   }
+   .container .menu-categories a {
+    width: 10em;
+    height: 5em;
+    
+   }
+   .container .menu-categories .button-menu {
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
    }
    .container .container-dos .imagen-derecha {
     display: none;
@@ -646,6 +685,10 @@ header.hidden {
     .whatsapp-fixed {
         width: 4em;
         height: 4em;
+    }
+
+    .modal {
+        display: none;
     }
 }
 

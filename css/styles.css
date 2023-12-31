@@ -553,7 +553,7 @@ header.hidden {
        display: grid;
        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
        gap: 10px;
-       margin-bottom: 10em;
+       margin-bottom: 20px;
     }
    .container .menu-categories .categories div {
     width: 100%;

@@ -68,50 +68,75 @@ document.addEventListener("DOMContentLoaded", function () {
         menuCategories.scrollIntoView({ behavior: 'smooth' });
     });
 });
-
 const abrirHamburguesa = document.querySelector("#modal-burguer-open");
 const cerrarHamburguesa = document.querySelector("#modal-burguer-close");
 const Hamburguesa = document.querySelector("#modal-burguer");
 
-abrirHamburguesa.addEventListener("click",()=>{
-    Hamburguesa.showModal();
-    console.log("lepicaste");
-})
-
-cerrarHamburguesa.addEventListener("click",()=>{
-    Hamburguesa.close();
-})
-
 const abrirPapas = document.querySelector("#modal-papas-open");
 const cerrarPapas = document.querySelector("#modal-papas-close");
-const Papas = document.querySelector("#modal-papas")
-
-abrirPapas.addEventListener("click", ()=>{
-    Papas.showModal();
-});
-
-cerrarPapas.addEventListener("click", ()=> {
-    Papas.close();
-});
+const Papas = document.querySelector("#modal-papas");
 
 const abrirMunchies = document.querySelector("#modal-munchies-open");
 const cerrarMunchies = document.querySelector("#modal-munchies-close");
 const Munchies = document.querySelector("#modal-munchies");
-abrirMunchies.addEventListener("click",()=> {
-    Munchies.showModal();
-});
-cerrarMunchies.addEventListener("click",()=> {
-    Munchies.close();
-});
 
 const abrirBebida = document.querySelector("#modal-bebidas-open");
 const cerrarBebida = document.querySelector("#modal-bebidas-close");
 const Bebidas = document.querySelector("#modal-bebidas");
-abrirBebida.addEventListener("click",()=> {
-    Bebidas.showModal();
-});
-cerrarBebida.addEventListener("click",()=> {
-    Bebidas.close();
+
+// Función para manejar eventos
+function manejarEventosModal(modal) {
+    modal.showModal();
+    console.log("Modal abierto");
+}
+
+// Verificar el tamaño de la pantalla al cargar la página
+window.onload = function () {
+    if (window.innerWidth > 768) {
+        // Si el ancho de la pantalla es mayor que 768px, entonces asigna los eventos
+        abrirHamburguesa.addEventListener("click", () => manejarEventosModal(Hamburguesa));
+        cerrarHamburguesa.addEventListener("click", () => Hamburguesa.close());
+
+        abrirPapas.addEventListener("click", () => manejarEventosModal(Papas));
+        cerrarPapas.addEventListener("click", () => Papas.close());
+
+        abrirMunchies.addEventListener("click", () => manejarEventosModal(Munchies));
+        cerrarMunchies.addEventListener("click", () => Munchies.close());
+
+        abrirBebida.addEventListener("click", () => manejarEventosModal(Bebidas));
+        cerrarBebida.addEventListener("click", () => Bebidas.close());
+    }
+};
+
+// Añadir un listener para el evento resize para comprobar cambios en el tamaño de la pantalla
+window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) {
+        // Si el ancho de la pantalla es mayor que 768px, entonces asigna los eventos
+        abrirHamburguesa.addEventListener("click", () => manejarEventosModal(Hamburguesa));
+        cerrarHamburguesa.addEventListener("click", () => Hamburguesa.close());
+
+        abrirPapas.addEventListener("click", () => manejarEventosModal(Papas));
+        cerrarPapas.addEventListener("click", () => Papas.close());
+
+        abrirMunchies.addEventListener("click", () => manejarEventosModal(Munchies));
+        cerrarMunchies.addEventListener("click", () => Munchies.close());
+
+        abrirBebida.addEventListener("click", () => manejarEventosModal(Bebidas));
+        cerrarBebida.addEventListener("click", () => Bebidas.close());
+    } else {
+        // Si el ancho de la pantalla no es mayor que 768px, puedes hacer algo más o no asignar eventos
+        abrirHamburguesa.removeEventListener("click", () => manejarEventosModal(Hamburguesa));
+        cerrarHamburguesa.removeEventListener("click", () => Hamburguesa.close());
+
+        abrirPapas.removeEventListener("click", () => manejarEventosModal(Papas));
+        cerrarPapas.removeEventListener("click", () => Papas.close());
+
+        abrirMunchies.removeEventListener("click", () => manejarEventosModal(Munchies));
+        cerrarMunchies.removeEventListener("click", () => Munchies.close());
+
+        abrirBebida.removeEventListener("click", () => manejarEventosModal(Bebidas));
+        cerrarBebida.removeEventListener("click", () => Bebidas.close());
+    }
 });
 
 

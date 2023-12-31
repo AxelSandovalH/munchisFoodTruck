@@ -161,12 +161,17 @@ header.hidden {
 
 /* Estilos del texto en el contenedor de categorías */
 
+.container .menu-categories .categories .comida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .container .menu-categories .categories .comida p {
     position: absolute;
     color: white ;
     font-weight: bold;
-    margin-top: 40%;
-    margin-left: 20%;
+    /* margin-top: 40%;
+    margin-left: 20%; */
     opacity: 0;
     z-index: 7;
     cursor: pointer;
@@ -568,6 +573,13 @@ header.hidden {
     object-fit: cover;
     z-index: 5;
    }
+   .container .menu-categories .categories .comida p,
+    .container .menu-categories .categories div:hover p {
+        opacity: 0; /* Oculta el texto en dispositivos móviles */
+    }
+    .container .menu-categories .categories div:hover img {
+        filter: none;
+    }
    .container .menu-categories a {
     width: 10em;
     height: 5em;
